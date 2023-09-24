@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <app-navbarfront></app-navbarfront>
+  <head>
+    <style>
+      .file-upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+
+  }
+
+  .file-upload input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  .file-upload label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: rgb(9, 9, 9);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+    </style>
+  </head>
+<body class="inner-pages hd-white">
+    <div id="wrapper">
+        <div class="clearfix"></div>
+        <!-- Header Container / End -->
+
+        <section class="headings">
+            <div class="text-heading text-center">
+                <div class="container">
+                    <h1>Register</h1>
+                    <h2><a href="index.html">Home </a> &nbsp;/&nbsp; Register</h2>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION HEADINGS -->
+
+        <!-- START SECTION 404 -->
+        <div id="login">
+            <div class="login">
+                <form autocomplete="off">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input required class="form-control" placeholder="type your firstname" type="text"  [(ngModel)]="user.firstname" name="firstname" >
+                        <i class="ti-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Last Name</label>
+                        <input required class="form-control" name="lastname" placeholder="type your lastname"  type="text" [(ngModel)]="user.lastname" name="lastname" >
+                        <i class="ti-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input required class="form-control" name="email" placeholder="type your email"  type="text" [(ngModel)]="user.email" name="email" >
+                        <i class="icon_mail_alt"></i>
+                    </div>
+                    <div class="form-group">
+                        <label>Your password</label>
+                        <input class="form-control" type="password" name="password" placeholder="type your password" [(ngModel)]="user.password" name="password" >
+                        <i class="icon_lock_alt"></i>
+                    </div>
+                    <div class="form-group">
+                      <label>Your address</label>
+                      <input class="form-control" type="text" name="address" placeholder="type your address" [(ngModel)]="user.address" name="address">
+                  </div>
+                    <label>Your Role</label>
+                    <select class="form-control" name="roles" id="roles" [(ngModel)]="user.roles" required >
+                      <option value="CLIENT">CLIENT</option>
+                      <option value="CONTRACTOR">CONTRACTOR</option>
+                      <option value="SELLER">SELLER</option>
+                      <option value="MOVER">MOVER</option>
+                      <option value="LESSOR">LESSOR</option>
+                    </select>
+
+
+                <label for="">Upload picture</label>
+                <div class="property-form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form  class="dropzone dz-clickable" ><div class="dz-default dz-message"><div class="file-upload">
+                                <input type="file" id="file-upload" name="file-upload" (change)="onFileSelected($event)"  />
+                                <label for="file-upload" ><i class="fa fa-cloud-upload"></i> Click here</label>
+                              </div>
+                              </div>
+                            </form>
+                        </div>
+                </div>
+
+          </div>
+              <!--<label>
+                Picture:
+                <input type="file" (change)="onFileSelected($event)" accept="image/*" required>
+              </label>!-->
+              <br>
+                    <div id="pass-info" class="clearfix"></div>
+                   <a (click)="Register()" class="btn_1 rounded full-width">Create your Account !</a>
+                    <div  class="text-center add_top_10">Already have an acccount? <strong><a  routerLink="/login">Sign In</a></strong></div>
+                </form>
+            </div>
+        </div>
+      <app-footer></app-footer>
+    </div>
+    <!-- Wrapper / End -->
+</body>
+
+
+<!-- Mirrored from code-theme.com/html/findhouses/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 Apr 2023 19:21:17 GMT -->
+</html>

@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajustez la hauteur selon vos besoins */
+  }
+  
+  table {
+    /* Ajoutez d'autres styles selon vos préférences */
+  }
+  
+  .weather-widget {
+    margin-right: 20px; /* Marge à droite pour espacer les éléments */
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  
